@@ -16,14 +16,14 @@ const distance1 = scalar(5, 'm');	// type: UnitedScalar<'m'>
 const distance2 = scalar(10, 'm');	// type: UnitedScalar<'m'>
 const time  = scalar(3, 's');		// type: UnitedScalar<'s'>
 
-// Add two scalars together.  This uses type-safety to encorce 
+// Add two scalars together.  This uses type-safety to enforce 
 // unit compatibility.
 const totalDistance = distance1.add(distance2); // type: UnitedScalar<'m'>
 ```
 
 ```typescript
 // Convert a scalar to a ratio
-const rate = totalDistance.divideBy(time); // type: UnitedRatio<'m','s'> 
+const rate = totalDistance.divideBy(time); // type: UnitedRatio<'m','s'>, meters/second
 const metersPerSecond = rate.value;
 ```
 
@@ -33,6 +33,6 @@ is enabled automatically for known units within the same category (Area, Distanc
 
 ```typescript
 const secondsToHours = converter('s', 'h');	// type: UnitConversion<'s', 'h'>
-const rateInHours = rate.convertDenominator(secondsToHours); // type: UnitedRatio<'m','h'>
+const rateInHours = rate.convertDenominator(secondsToHours); // type: UnitedRatio<'m','h'> now meters/hour and the value has changed accordingly.
 const metersPerHour = rateInHours.value;
 ```
