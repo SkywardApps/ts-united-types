@@ -27,24 +27,24 @@ export class UnitedRatio<T extends string, D extends string> extends UnitConvers
 		return new UnitedRatio<D, T>(this.dest, this.source);
 	}
 
-	public convertNumerator<TN extends string, TD extends string>(convertor: TN extends T ? UnitConversion<TN, TD> : UnitTypeError<'Conversion unit mismatch', T, TN>) 
+	public convertNumerator<TN extends string, TD extends string>(converter: TN extends T ? UnitConversion<TN, TD> : UnitTypeError<'Conversion unit mismatch', T, TN>) 
 	{
-		if(!UnitConversion.isConversion<TN, TD>(convertor))
+		if(!UnitConversion.isConversion<TN, TD>(converter))
 		{
 			throw new Error('Invalid conversion object');
 		}
-		const calculatedN = (this.source.value / convertor.source.value) * convertor.dest.value;
-		return ratio(calculatedN, convertor.dest.unit, this.dest.value, this.dest.unit);
+		const calculatedN = (this.source.value / converter.source.value) * converter.dest.value;
+		return ratio(calculatedN, converter.dest.unit, this.dest.value, this.dest.unit);
 	}
 
-	public convertDenominator<TN extends string, TD extends string>(convertor: TN extends D ? UnitConversion<TN, TD> : UnitTypeError<'Conversion unit mismatch', D, TN>) 
+	public convertDenominator<TN extends string, TD extends string>(converter: TN extends D ? UnitConversion<TN, TD> : UnitTypeError<'Conversion unit mismatch', D, TN>) 
 	{
-		if(!UnitConversion.isConversion<TN, TD>(convertor))
+		if(!UnitConversion.isConversion<TN, TD>(converter))
 		{
 			throw new Error('Invalid conversion object');
 		}
-		const calculatedD = (this.dest.value / convertor.dest.value) * convertor.source.value;
-		return ratio(this.source.value, this.source.unit, calculatedD, convertor.dest.unit);
+		const calculatedD = (this.dest.value / converter.dest.value) * converter.source.value;
+		return ratio(this.source.value, this.source.unit, calculatedD, converter.dest.unit);
 	}
 	
 	public add<TN, TD>(other: TN extends T ? TD extends D ? UnitedRatio<TN, TD> : UnitTypeError<'Denominator mismatch', TD, D> : UnitTypeError<'Numerator mismatch', TN, T>) 

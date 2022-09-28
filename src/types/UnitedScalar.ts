@@ -59,12 +59,12 @@ export class UnitedScalar<N extends string> extends UnitedValue
 		return new UnitedScalar<TN>(this.value * other.value, other.source.unit);
 	}
 
-	public convert<TN extends string, TD extends string>(convertor: TN extends N ? UnitConversion<TN, TD> : UnitTypeError<'Conversion unit mismatch', N, TN>) 
+	public convert<TN extends string, TD extends string>(converter: TN extends N ? UnitConversion<TN, TD> : UnitTypeError<'Conversion unit mismatch', N, TN>) 
 	{
-		if(!UnitConversion.isConversion<TN, TD>(convertor))
+		if(!UnitConversion.isConversion<TN, TD>(converter))
 		{
 			throw new Error('Invalid conversion object');
 		}
-		return new UnitedScalar<TD>((this.value / convertor.source.value) * convertor.dest.value, convertor.dest.unit);
+		return new UnitedScalar<TD>((this.value / converter.source.value) * converter.dest.value, converter.dest.unit);
 	}
 }

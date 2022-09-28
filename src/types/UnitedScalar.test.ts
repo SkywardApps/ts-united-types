@@ -1,3 +1,4 @@
+import { converter } from '../converter';
 import { scalar } from '../scalar';
 
 describe('Scalar', () => 
@@ -56,3 +57,21 @@ describe('Scalar', () =>
 		expect(metersPerSecond.value).toBe(5.5 / 3.1);
 	});
 });
+
+
+const distance1 = scalar(5, 'm');	// type: UnitedScalar<'m'>
+const distance2 = scalar(10, 'm');	// type: UnitedScalar<'m'>
+const time  = scalar(3, 's');		// type: UnitedScalar<'s'>
+
+// Add two scalars together.  This uses type-safety to encorce 
+// unit compatibility.
+const totalDistance = distance1.add(distance2); // type: UnitedScalar<'m'>
+
+// Convert a scalar to a ratio
+const rate = totalDistance.divideBy(time); // type: UnitedRatio<'m','s'> 
+const metersPerSecond = rate.value;
+
+const secondsToHours = converter('s', 'h');	// type: UnitConversion<'s', 'h'>
+const rateInHours = rate.convertDenominator(secondsToHours); // type: UnitedRatio<'m','h'>
+const metersPerHour = rateInHours.value;
+
