@@ -1,3 +1,5 @@
+@skywardapps/ts-united-types / [Exports](modules.md)
+
 # ts-united-types
 
 A library for creating, using, and tracking  `unit`-ed numbers -- that is, 'meters', 'seconds', 'volts', etc.
@@ -26,7 +28,6 @@ const totalDistance = distance1.add(distance2); // type: UnitedScalar<'m'>
 const rate = totalDistance.divideBy(time); // type: UnitedRatio<'m','s'>, meters/second
 const metersPerSecond = rate.value;
 ```
-
 
 Additionally, via importing the [`convert-units`](https://github.com/convert-units/convert-units) library, runtime conversion
 is enabled automatically for known units within the same category (Area, Distance, Time, etc).

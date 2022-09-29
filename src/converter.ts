@@ -27,6 +27,17 @@ export function converter<InT extends autoConverter.Time, OutT extends string>(i
 export function converter<InT extends autoConverter.Voltage, OutT extends string>(inT: InT, outT: OutT) :  OutT extends autoConverter.Voltage ?  UnitConversion<InT, OutT> : UnitTypeError<'Mismatched unit type for converter', autoConverter.Voltage, OutT>;
 export function converter<InT extends autoConverter.Volume, OutT extends string>(inT: InT, outT: OutT) :  OutT extends autoConverter.Volume ?  UnitConversion<InT, OutT> : UnitTypeError<'Mismatched unit type for converter', autoConverter.Volume, OutT>;
 export function converter<InT extends autoConverter.VolumeFlowRate, OutT extends string>(inT: InT, outT: OutT) :  OutT extends autoConverter.VolumeFlowRate ?  UnitConversion<InT, OutT> : UnitTypeError<'Mismatched unit type for converter', autoConverter.VolumeFlowRate, OutT>;
+
+
+/**
+ * Create a converter between one unit and another.
+ * 
+ * There are two ways to use this via overloads:
+ * 	1. Any arbitrary units: provide the values and unit types. `converter(1, 'meter', 100, 'centimeters')`
+ *  2. Use `convert-units` to automatically generate the conversion. `converter('m','cm')`;  This will
+ * only work for known units (see [`convert-units`](https://github.com/convert-units/convert-units) for a list).  
+ * It will enforce that both units are of the same category -- eg both are AREA or both are DISTANCE, etc.
+ */
 export function converter<InT extends string, OutT extends string>(a: number | InT, b: InT | OutT, c?: number, d?: OutT) : UnitConversion<InT, OutT>
 {
 	if(typeof a === 'number' && typeof c === 'number')

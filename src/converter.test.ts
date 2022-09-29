@@ -21,4 +21,6 @@ describe('converter factory', () =>
 		expect(auto.dest.value).toBeCloseTo(2.4710514233241505);
 		expect(auto.dest.unit).toBe('ac');
 	});
+
+	// TODO: Temperature (C -> F) and other non-scaling unit conversions.
 });
