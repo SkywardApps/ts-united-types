@@ -22,7 +22,7 @@ describe('End to End', () =>
 
 		// Figure out our costs
 		const seedsPerHectare = seedsPerAcre.convertDenominator(hectaresToAcres.inverse());
-		expect(seedsPerHectare.value).toBeCloseTo(1.087263e+5, 1);
+		expect(seedsPerHectare.value).toBeCloseTo(108726.3, 1);
 		const totalSeedsRequired = seedsPerHectare.multiply(fieldArea);
 		expect(totalSeedsRequired.value).toBeCloseTo(1087262.62, 1);
 		const bagsRequired = totalSeedsRequired.divideByRatio(seedsPerBag);
