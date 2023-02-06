@@ -12,8 +12,8 @@ describe('End to End', () =>
 		const hectaresToAcres = converter('ha', 'ac');
 		const seedsPerBag = ratio(50000, 'seeds', 1, 'bags');
 		const costPerBag = ratio(50, 'dollars', 'bags'); 
-		const expectedYieldPerHectare = ratio(12, 'bushels', 'ha');
-		const pricePerTon = ratio(84, 'dollars', 'tons');
+		const expectedYieldPerHectare = ratio(172, 'bushels', 'ha');
+		const pricePerTon = ratio(60, 'dollars', 'tons');
 		const bushelsPerTon = ratio(0.0254, 'tons', 'bushels');
 
 		// What is our planting emergence rate?
@@ -22,25 +22,25 @@ describe('End to End', () =>
 
 		// Figure out our costs
 		const seedsPerHectare = seedsPerAcre.convertDenominator(hectaresToAcres.inverse());
-		expect(seedsPerHectare.value).toBeCloseTo(17806.18, 1);
+		expect(seedsPerHectare.value).toBeCloseTo(1.087263e+5, 1);
 		const totalSeedsRequired = seedsPerHectare.multiply(fieldArea);
-		expect(totalSeedsRequired.value).toBeCloseTo(178061.81, 1);
-		const bagsRequired = totalSeedsRequired.divideByMeasurement(seedsPerBag);
+		expect(totalSeedsRequired.value).toBeCloseTo(1087262.62, 1);
+		const bagsRequired = totalSeedsRequired.divideByRatio(seedsPerBag);
 		const roundedUpBagsRequired = bagsRequired.modify(Math.ceil);
-		expect(roundedUpBagsRequired.value).toBe(4);
-		const costOfField = roundedUpBagsRequired.multiplyByMeasurement(costPerBag);
-		expect(costOfField.value).toBe(200);
+		expect(roundedUpBagsRequired.value).toBe(22);
+		const costOfField = roundedUpBagsRequired.multiplyByRatio(costPerBag);
+		expect(costOfField.value).toBe(1100);
 
 		// Figure out our revenue
 		const expectedYieldForField = expectedYieldPerHectare.multiply(fieldArea);
-		expect(expectedYieldForField.value).toBe(120);
-		const totalTonsOfYield = expectedYieldForField.multiplyByMeasurement(bushelsPerTon);
-		expect(totalTonsOfYield.value).toBe(3.048);
-		const totalRevenueOfField = totalTonsOfYield.multiplyByMeasurement(pricePerTon);
-		expect(totalRevenueOfField.value).toBe(256.032);
+		expect(expectedYieldForField.value).toBe(1720);
+		const totalTonsOfYield = expectedYieldForField.multiplyByRatio(bushelsPerTon);
+		expect(totalTonsOfYield.value).toBeCloseTo(43.688, 1);
+		const totalRevenueOfField = totalTonsOfYield.multiplyByRatio(pricePerTon);
+		expect(totalRevenueOfField.value).toBeCloseTo(2621.27, 1);
 
 		const profit = totalRevenueOfField.subtract(costOfField);
-		expect(profit.value).toBeCloseTo(56.032,3);
+		expect(profit.value).toBeCloseTo(1521.28,1);
 	});
 
 	// The original use case was fitting to a benefit (ROI) calculator for farmers.
@@ -66,12 +66,13 @@ describe('End to End', () =>
 		const yieldAdvantage = (economicOptimumYield.subtract(standardYield)).multiply(area);
 		expect(yieldAdvantage.value).toBeCloseTo(0.042929221334,5);		
 		
-		const extraRevenue = yieldAdvantage.multiplyByMeasurement(cornPrice);
+		const extraRevenue = yieldAdvantage.multiplyByRatio(cornPrice);
 		const extraSeeds = (economicPlantingRate.subtract(standardPlantingRate)).multiply(area.convert(convertArea.inverse()));
-		const extraBags = extraSeeds.divideByMeasurement(seedsPerBag);
-		const extraCost = extraBags.multiplyByMeasurement(costPerBag);
+		const extraBags = extraSeeds.divideByRatio(seedsPerBag);
+		const extraCost = extraBags.multiplyByRatio(costPerBag);
 		const profit = extraRevenue.subtract(extraCost);
 
 		expect(profit.value).toBeCloseTo(133.26, 2);
 	});
 });
+

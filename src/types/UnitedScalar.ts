@@ -5,6 +5,7 @@ import { scalar } from '../scalar';
 import { UnitedRatio } from './UnitedRatio';
 
 /**
+ * NOT FOR GENERAL USE -- use the `scalar` factory method, typically.
  * A `Unit`-ed scalar value is a simple number with a specific unit attached to it.
  * 
  * Examples: 5 meters or 2.2 seconds.
@@ -67,16 +68,16 @@ export class UnitedScalar<N extends string>
 	}
 
 	/**
-	 * Return a new measurement that is the result of this scalar divided by the
+	 * Return a new ratio that is the result of this scalar divided by the
 	 * provided ratio's numerator multipled by the ratio's denominator. Essentially,
 	 * apply the inverse of the ratio.
 	 * 
 	 * The unit of the ratio's numerator should match this scalar's unit, and the 
 	 * resulting scalar's units will match the ratio's denominator.
 	 * 
-	 * For example "meters" divideByMeasurement  "meters" / "seconds" => "seconds"
+	 * For example "meters" divideByRatio  "meters" / "seconds" => "seconds"
 	 */
-	public divideByMeasurement<TN extends string, TD extends string>(other: TN extends N ? UnitedRatio<TN, TD> : UnitTypeError<'Unit mismatch', N, TN>) 
+	public divideByRatio<TN extends string, TD extends string>(other: TN extends N ? UnitedRatio<TN, TD> : UnitTypeError<'Unit mismatch', N, TN>) 
 	{
 		if(!UnitedRatio.isRatio<N, TD>(other))
 		{
@@ -86,16 +87,16 @@ export class UnitedScalar<N extends string>
 	}
 
 	/**
-	 * Return a new measurement that is the result of this scalar divided by the
+	 * Return a new ratio that is the result of this scalar divided by the
 	 * provided ratio's denominator multipled by the ratio's numerator. Essentially,
 	 * apply the ratio.
 	 * 
 	 * The unit of the ratio's denominator should match this scalar's unit, and the 
 	 * resulting scalar's units will match the ratio's numerator.
 	 * 
-	 * For example "seconds" multiplyByMeasurement  "meters" / "seconds" => "meters"
+	 * For example "seconds" multiplyByRatio  "meters" / "seconds" => "meters"
 	 */
-	public multiplyByMeasurement<TN extends string, TD extends string>(other: TD extends N ? UnitedRatio<TN, TD> : UnitTypeError<'Unit mismatch', N, TD>) 
+	public multiplyByRatio<TN extends string, TD extends string>(other: TD extends N ? UnitedRatio<TN, TD> : UnitTypeError<'Unit mismatch', N, TD>) 
 	{
 		if(!UnitedRatio.isRatio<TN, TD>(other))
 		{

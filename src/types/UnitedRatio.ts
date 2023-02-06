@@ -6,6 +6,7 @@ import { UnitTypeError } from './UnitTypeError';
 
 
 /**
+ * NOT FOR GENERAL USE -- use the `ratio` factory method, typically.
  * A `Unit`-ed ratio is a relationship between two differently-`unit`-ed scalar values.
  * 
  * Examples: 10 meters per second or 4 width : 3 height
@@ -67,7 +68,7 @@ export class UnitedRatio<T extends string, D extends string> extends UnitConvers
 		{
 			throw new Error('Invalid conversion object');
 		}
-		const calculatedD = (this.dest.value / converter.dest.value) * converter.source.value;
+		const calculatedD = (this.dest.value / converter.source.value) * converter.dest.value;
 		return ratio(this.source.value, this.source.unit, calculatedD, converter.dest.unit);
 	}
 	

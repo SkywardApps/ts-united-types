@@ -24,6 +24,16 @@ describe('Conversion', () =>
 		expect(result.unit).toBe('acres');
 	});
 
+	test('Convert non-1 scales', () => 
+	{
+		const value = scalar(10, 'hectares');   
+		const convert = converter(2, 'hectares', 4.942103, 'acres');
+		const result = value.convert(convert);
+		expect(result).not.toBeFalsy();
+		expect(result.value).toBeCloseTo(24.71052, 5);
+		expect(result.unit).toBe('acres');
+	});
+
 	test('Invert', () => 
 	{
 		const value = scalar(10, 'hectares');   
@@ -56,11 +66,11 @@ describe('Conversion', () =>
 
 	test('Convert a denominator', () => 
 	{
-		const measure = ratio(55.55, 'meters', 'seconds'); 
-		const convert = converter(1, 'seconds', 60, 'minutes');
+		const measure = ratio(1, 'meters', 1, 'seconds'); 
+		const convert = converter(60, 'seconds', 1, 'minutes');
 		const converted = measure.convertDenominator(convert);
 		expect(converted).not.toBeFalsy();
-		expect(converted.value).toBe(55.55 * 60);
+		expect(converted.value).toBe(60);
 	});
 	
 	test('Convert a numerator', () => 
