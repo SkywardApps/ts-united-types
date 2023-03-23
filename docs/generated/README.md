@@ -38,4 +38,25 @@ const rateInHours = rate.convertDenominator(secondsToHours); // type: UnitedRati
 const metersPerHour = rateInHours.value;
 ```
 
+We can now handle values whose unit isn't know at build-time with the `dynamicToScalar` and `scalarToDynamic` methods.
+```typescript
+const inputValue = 1.3;
+const inputUnit = 'ha';
+function ConvertMyAreaValueToAcres(inputValue: number, inputUnit: string): UnitedScalar<'ac'> {
+    // Will throw an exception if inputUnit isn't known or is the wrong kind of unit (in this case, not area).
+    return dynamicToScalar(inputValue, inputUnit, 'ac');
+    // Returning a typed scalar with the value in acres. 
+}
+```
+
+```typescript
+const inputValue = 1.3;
+const inputUnit = 'ha';
+function ConvertAcresToAnotherAreaUnit(inputValue: UnitedScalar<'ac'>, outputUnit: string): number {
+    // Will throw an exception if outputUnit isn't known or is the wrong kind of unit (in this case, not area).
+    return scalarToDynamic(inputValue, outputUnit); 
+    // Returning the raw number of the value converted to the destination unit.
+}
+```
+
 View the API documentation in the [docs folder.](docs/generated/modules.md)

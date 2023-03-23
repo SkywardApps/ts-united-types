@@ -52,7 +52,7 @@ It will enforce that both units are of the same category -- eg both are AREA or 
 
 #### Defined in
 
-[converter.ts:7](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/converter.ts#L7)
+[converter.ts:7](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/converter.ts#L7)
 
 ▸ **converter**<`InT`, `OutT`\>(`inT`, `outT`): `OutT` extends `autoConverter.Area` ? [`UnitConversion`](classes/UnitConversion.md)<`InT`, `OutT`\> : `UnitTypeError`<``"Mismatched unit type for converter"``, `autoConverter.Area`, `OutT`\>
 
@@ -84,7 +84,7 @@ It will enforce that both units are of the same category -- eg both are AREA or 
 
 #### Defined in
 
-[converter.ts:8](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/converter.ts#L8)
+[converter.ts:8](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/converter.ts#L8)
 
 ▸ **converter**<`InT`, `OutT`\>(`inT`, `outT`): `OutT` extends `autoConverter.Distance` ? [`UnitConversion`](classes/UnitConversion.md)<`InT`, `OutT`\> : `UnitTypeError`<``"Mismatched unit type for converter"``, `autoConverter.Distance`, `OutT`\>
 
@@ -116,7 +116,7 @@ It will enforce that both units are of the same category -- eg both are AREA or 
 
 #### Defined in
 
-[converter.ts:9](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/converter.ts#L9)
+[converter.ts:9](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/converter.ts#L9)
 
 ▸ **converter**<`InT`, `OutT`\>(`inT`, `outT`): `OutT` extends `autoConverter.Angle` ? [`UnitConversion`](classes/UnitConversion.md)<`InT`, `OutT`\> : `UnitTypeError`<``"Mismatched unit type for converter"``, `autoConverter.Angle`, `OutT`\>
 
@@ -148,7 +148,7 @@ It will enforce that both units are of the same category -- eg both are AREA or 
 
 #### Defined in
 
-[converter.ts:10](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/converter.ts#L10)
+[converter.ts:10](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/converter.ts#L10)
 
 ▸ **converter**<`InT`, `OutT`\>(`inT`, `outT`): `OutT` extends `autoConverter.ApparentPower` ? [`UnitConversion`](classes/UnitConversion.md)<`InT`, `OutT`\> : `UnitTypeError`<``"Mismatched unit type for converter"``, `autoConverter.ApparentPower`, `OutT`\>
 
@@ -180,7 +180,7 @@ It will enforce that both units are of the same category -- eg both are AREA or 
 
 #### Defined in
 
-[converter.ts:11](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/converter.ts#L11)
+[converter.ts:11](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/converter.ts#L11)
 
 ▸ **converter**<`InT`, `OutT`\>(`inT`, `outT`): `OutT` extends `autoConverter.Current` ? [`UnitConversion`](classes/UnitConversion.md)<`InT`, `OutT`\> : `UnitTypeError`<``"Mismatched unit type for converter"``, `autoConverter.Current`, `OutT`\>
 
@@ -212,7 +212,7 @@ It will enforce that both units are of the same category -- eg both are AREA or 
 
 #### Defined in
 
-[converter.ts:12](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/converter.ts#L12)
+[converter.ts:12](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/converter.ts#L12)
 
 ▸ **converter**<`InT`, `OutT`\>(`inT`, `outT`): `OutT` extends `autoConverter.Ditgital` ? [`UnitConversion`](classes/UnitConversion.md)<`InT`, `OutT`\> : `UnitTypeError`<``"Mismatched unit type for converter"``, `autoConverter.Ditgital`, `OutT`\>
 
@@ -244,7 +244,7 @@ It will enforce that both units are of the same category -- eg both are AREA or 
 
 #### Defined in
 
-[converter.ts:13](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/converter.ts#L13)
+[converter.ts:13](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/converter.ts#L13)
 
 ▸ **converter**<`InT`, `OutT`\>(`inT`, `outT`): `OutT` extends `autoConverter.Energy` ? [`UnitConversion`](classes/UnitConversion.md)<`InT`, `OutT`\> : `UnitTypeError`<``"Mismatched unit type for converter"``, `autoConverter.Energy`, `OutT`\>
 
@@ -276,7 +276,7 @@ It will enforce that both units are of the same category -- eg both are AREA or 
 
 #### Defined in
 
-[converter.ts:14](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/converter.ts#L14)
+[converter.ts:14](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/converter.ts#L14)
 
 ▸ **converter**<`InT`, `OutT`\>(`inT`, `outT`): `OutT` extends `autoConverter.Frequency` ? [`UnitConversion`](classes/UnitConversion.md)<`InT`, `OutT`\> : `UnitTypeError`<``"Mismatched unit type for converter"``, `autoConverter.Frequency`, `OutT`\>
 
@@ -308,7 +308,7 @@ It will enforce that both units are of the same category -- eg both are AREA or 
 
 #### Defined in
 
-[converter.ts:15](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/converter.ts#L15)
+[converter.ts:15](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/converter.ts#L15)
 
 ▸ **converter**<`InT`, `OutT`\>(`inT`, `outT`): `OutT` extends `autoConverter.Illuminance` ? [`UnitConversion`](classes/UnitConversion.md)<`InT`, `OutT`\> : `UnitTypeError`<``"Mismatched unit type for converter"``, `autoConverter.Illuminance`, `OutT`\>
 
@@ -340,7 +340,7 @@ It will enforce that both units are of the same category -- eg both are AREA or 
 
 #### Defined in
 
-[converter.ts:16](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/converter.ts#L16)
+[converter.ts:16](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/converter.ts#L16)
 
 ▸ **converter**<`InT`, `OutT`\>(`inT`, `outT`): `OutT` extends `autoConverter.Mass` ? [`UnitConversion`](classes/UnitConversion.md)<`InT`, `OutT`\> : `UnitTypeError`<``"Mismatched unit type for converter"``, `autoConverter.Mass`, `OutT`\>
 
@@ -372,7 +372,7 @@ It will enforce that both units are of the same category -- eg both are AREA or 
 
 #### Defined in
 
-[converter.ts:17](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/converter.ts#L17)
+[converter.ts:17](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/converter.ts#L17)
 
 ▸ **converter**<`InT`, `OutT`\>(`inT`, `outT`): `OutT` extends `autoConverter.Pace` ? [`UnitConversion`](classes/UnitConversion.md)<`InT`, `OutT`\> : `UnitTypeError`<``"Mismatched unit type for converter"``, `autoConverter.Pace`, `OutT`\>
 
@@ -404,7 +404,7 @@ It will enforce that both units are of the same category -- eg both are AREA or 
 
 #### Defined in
 
-[converter.ts:18](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/converter.ts#L18)
+[converter.ts:18](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/converter.ts#L18)
 
 ▸ **converter**<`InT`, `OutT`\>(`inT`, `outT`): `OutT` extends `autoConverter.PartsPer` ? [`UnitConversion`](classes/UnitConversion.md)<`InT`, `OutT`\> : `UnitTypeError`<``"Mismatched unit type for converter"``, `autoConverter.PartsPer`, `OutT`\>
 
@@ -436,7 +436,7 @@ It will enforce that both units are of the same category -- eg both are AREA or 
 
 #### Defined in
 
-[converter.ts:19](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/converter.ts#L19)
+[converter.ts:19](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/converter.ts#L19)
 
 ▸ **converter**<`InT`, `OutT`\>(`inT`, `outT`): `OutT` extends `autoConverter.Power` ? [`UnitConversion`](classes/UnitConversion.md)<`InT`, `OutT`\> : `UnitTypeError`<``"Mismatched unit type for converter"``, `autoConverter.Power`, `OutT`\>
 
@@ -468,7 +468,7 @@ It will enforce that both units are of the same category -- eg both are AREA or 
 
 #### Defined in
 
-[converter.ts:20](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/converter.ts#L20)
+[converter.ts:20](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/converter.ts#L20)
 
 ▸ **converter**<`InT`, `OutT`\>(`inT`, `outT`): `OutT` extends `autoConverter.Pressure` ? [`UnitConversion`](classes/UnitConversion.md)<`InT`, `OutT`\> : `UnitTypeError`<``"Mismatched unit type for converter"``, `autoConverter.Pressure`, `OutT`\>
 
@@ -500,7 +500,7 @@ It will enforce that both units are of the same category -- eg both are AREA or 
 
 #### Defined in
 
-[converter.ts:21](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/converter.ts#L21)
+[converter.ts:21](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/converter.ts#L21)
 
 ▸ **converter**<`InT`, `OutT`\>(`inT`, `outT`): `OutT` extends `autoConverter.ReactiveEnergy` ? [`UnitConversion`](classes/UnitConversion.md)<`InT`, `OutT`\> : `UnitTypeError`<``"Mismatched unit type for converter"``, `autoConverter.ReactiveEnergy`, `OutT`\>
 
@@ -532,7 +532,7 @@ It will enforce that both units are of the same category -- eg both are AREA or 
 
 #### Defined in
 
-[converter.ts:22](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/converter.ts#L22)
+[converter.ts:22](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/converter.ts#L22)
 
 ▸ **converter**<`InT`, `OutT`\>(`inT`, `outT`): `OutT` extends `autoConverter.ReactivePower` ? [`UnitConversion`](classes/UnitConversion.md)<`InT`, `OutT`\> : `UnitTypeError`<``"Mismatched unit type for converter"``, `autoConverter.ReactivePower`, `OutT`\>
 
@@ -564,7 +564,7 @@ It will enforce that both units are of the same category -- eg both are AREA or 
 
 #### Defined in
 
-[converter.ts:23](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/converter.ts#L23)
+[converter.ts:23](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/converter.ts#L23)
 
 ▸ **converter**<`InT`, `OutT`\>(`inT`, `outT`): `OutT` extends `autoConverter.Speed` ? [`UnitConversion`](classes/UnitConversion.md)<`InT`, `OutT`\> : `UnitTypeError`<``"Mismatched unit type for converter"``, `autoConverter.Speed`, `OutT`\>
 
@@ -596,7 +596,7 @@ It will enforce that both units are of the same category -- eg both are AREA or 
 
 #### Defined in
 
-[converter.ts:24](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/converter.ts#L24)
+[converter.ts:24](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/converter.ts#L24)
 
 ▸ **converter**<`InT`, `OutT`\>(`inT`, `outT`): `OutT` extends `autoConverter.Temperature` ? [`UnitConversion`](classes/UnitConversion.md)<`InT`, `OutT`\> : `UnitTypeError`<``"Mismatched unit type for converter"``, `autoConverter.Temperature`, `OutT`\>
 
@@ -628,7 +628,7 @@ It will enforce that both units are of the same category -- eg both are AREA or 
 
 #### Defined in
 
-[converter.ts:25](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/converter.ts#L25)
+[converter.ts:25](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/converter.ts#L25)
 
 ▸ **converter**<`InT`, `OutT`\>(`inT`, `outT`): `OutT` extends `autoConverter.Time` ? [`UnitConversion`](classes/UnitConversion.md)<`InT`, `OutT`\> : `UnitTypeError`<``"Mismatched unit type for converter"``, `autoConverter.Time`, `OutT`\>
 
@@ -660,7 +660,7 @@ It will enforce that both units are of the same category -- eg both are AREA or 
 
 #### Defined in
 
-[converter.ts:26](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/converter.ts#L26)
+[converter.ts:26](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/converter.ts#L26)
 
 ▸ **converter**<`InT`, `OutT`\>(`inT`, `outT`): `OutT` extends `autoConverter.Voltage` ? [`UnitConversion`](classes/UnitConversion.md)<`InT`, `OutT`\> : `UnitTypeError`<``"Mismatched unit type for converter"``, `autoConverter.Voltage`, `OutT`\>
 
@@ -692,7 +692,7 @@ It will enforce that both units are of the same category -- eg both are AREA or 
 
 #### Defined in
 
-[converter.ts:27](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/converter.ts#L27)
+[converter.ts:27](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/converter.ts#L27)
 
 ▸ **converter**<`InT`, `OutT`\>(`inT`, `outT`): `OutT` extends `autoConverter.Volume` ? [`UnitConversion`](classes/UnitConversion.md)<`InT`, `OutT`\> : `UnitTypeError`<``"Mismatched unit type for converter"``, `autoConverter.Volume`, `OutT`\>
 
@@ -724,7 +724,7 @@ It will enforce that both units are of the same category -- eg both are AREA or 
 
 #### Defined in
 
-[converter.ts:28](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/converter.ts#L28)
+[converter.ts:28](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/converter.ts#L28)
 
 ▸ **converter**<`InT`, `OutT`\>(`inT`, `outT`): `OutT` extends `autoConverter.VolumeFlowRate` ? [`UnitConversion`](classes/UnitConversion.md)<`InT`, `OutT`\> : `UnitTypeError`<``"Mismatched unit type for converter"``, `autoConverter.VolumeFlowRate`, `OutT`\>
 
@@ -756,7 +756,7 @@ It will enforce that both units are of the same category -- eg both are AREA or 
 
 #### Defined in
 
-[converter.ts:29](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/converter.ts#L29)
+[converter.ts:29](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/converter.ts#L29)
 
 ___
 
@@ -785,7 +785,7 @@ ___
 
 #### Defined in
 
-[ratio.ts:6](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/ratio.ts#L6)
+[ratio.ts:6](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/ratio.ts#L6)
 
 ▸ **ratio**<`InT`, `OutT`\>(`inV`, `inT`, `outV`, `outT`): [`UnitedRatio`](classes/UnitedRatio.md)<`InT`, `OutT`\>
 
@@ -811,7 +811,7 @@ ___
 
 #### Defined in
 
-[ratio.ts:7](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/ratio.ts#L7)
+[ratio.ts:7](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/ratio.ts#L7)
 
 ___
 
@@ -838,4 +838,4 @@ ___
 
 #### Defined in
 
-[scalar.ts:3](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/scalar.ts#L3)
+[scalar.ts:4](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/scalar.ts#L4)

@@ -2,6 +2,7 @@
 
 # Class: UnitedScalar<N\>
 
+NOT FOR GENERAL USE -- use the `scalar` factory method, typically.
 A `Unit`-ed scalar value is a simple number with a specific unit attached to it.
 
 Examples: 5 meters or 2.2 seconds.
@@ -28,10 +29,10 @@ Examples: 5 meters or 2.2 seconds.
 - [add](UnitedScalar.md#add)
 - [convert](UnitedScalar.md#convert)
 - [divideBy](UnitedScalar.md#divideby)
-- [divideByMeasurement](UnitedScalar.md#dividebymeasurement)
+- [divideByRatio](UnitedScalar.md#dividebyratio)
 - [modify](UnitedScalar.md#modify)
 - [multiply](UnitedScalar.md#multiply)
-- [multiplyByMeasurement](UnitedScalar.md#multiplybymeasurement)
+- [multiplyByRatio](UnitedScalar.md#multiplybyratio)
 - [subtract](UnitedScalar.md#subtract)
 
 ## Constructors
@@ -57,7 +58,7 @@ The default constructor takes the value and the unit.
 
 #### Defined in
 
-[types/UnitedScalar.ts:20](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitedScalar.ts#L20)
+[types/UnitedScalar.ts:21](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitedScalar.ts#L21)
 
 ## Properties
 
@@ -67,7 +68,7 @@ The default constructor takes the value and the unit.
 
 #### Defined in
 
-[types/UnitedScalar.ts:14](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitedScalar.ts#L14)
+[types/UnitedScalar.ts:15](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitedScalar.ts#L15)
 
 ___
 
@@ -77,7 +78,7 @@ ___
 
 #### Defined in
 
-[types/UnitedScalar.ts:15](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitedScalar.ts#L15)
+[types/UnitedScalar.ts:16](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitedScalar.ts#L16)
 
 ## Methods
 
@@ -106,7 +107,7 @@ this and the parameter.
 
 #### Defined in
 
-[types/UnitedScalar.ts:38](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitedScalar.ts#L38)
+[types/UnitedScalar.ts:39](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitedScalar.ts#L39)
 
 ___
 
@@ -135,7 +136,7 @@ Convert this scalar from one unit to another.
 
 #### Defined in
 
-[types/UnitedScalar.ts:110](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitedScalar.ts#L110)
+[types/UnitedScalar.ts:111](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitedScalar.ts#L111)
 
 ___
 
@@ -163,22 +164,22 @@ Return a ratio that is this over the provided parameter.
 
 #### Defined in
 
-[types/UnitedScalar.ts:55](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitedScalar.ts#L55)
+[types/UnitedScalar.ts:56](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitedScalar.ts#L56)
 
 ___
 
-### divideByMeasurement
+### divideByRatio
 
-▸ **divideByMeasurement**<`TN`, `TD`\>(`other`): [`UnitedScalar`](UnitedScalar.md)<`TD`\>
+▸ **divideByRatio**<`TN`, `TD`\>(`other`): [`UnitedScalar`](UnitedScalar.md)<`TD`\>
 
-Return a new measurement that is the result of this scalar divided by the
+Return a new ratio that is the result of this scalar divided by the
 provided ratio's numerator multipled by the ratio's denominator. Essentially,
 apply the inverse of the ratio.
 
 The unit of the ratio's numerator should match this scalar's unit, and the 
 resulting scalar's units will match the ratio's denominator.
 
-For example "meters" divideByMeasurement  "meters" / "seconds" => "seconds"
+For example "meters" divideByRatio  "meters" / "seconds" => "seconds"
 
 #### Type parameters
 
@@ -199,7 +200,7 @@ For example "meters" divideByMeasurement  "meters" / "seconds" => "seconds"
 
 #### Defined in
 
-[types/UnitedScalar.ts:79](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitedScalar.ts#L79)
+[types/UnitedScalar.ts:80](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitedScalar.ts#L80)
 
 ___
 
@@ -221,7 +222,7 @@ Return a new scalar of the same unit with a modified value.
 
 #### Defined in
 
-[types/UnitedScalar.ts:29](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitedScalar.ts#L29)
+[types/UnitedScalar.ts:30](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitedScalar.ts#L30)
 
 ___
 
@@ -244,22 +245,22 @@ by the provided parameter;
 
 #### Defined in
 
-[types/UnitedScalar.ts:64](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitedScalar.ts#L64)
+[types/UnitedScalar.ts:65](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitedScalar.ts#L65)
 
 ___
 
-### multiplyByMeasurement
+### multiplyByRatio
 
-▸ **multiplyByMeasurement**<`TN`, `TD`\>(`other`): [`UnitedScalar`](UnitedScalar.md)<`TN`\>
+▸ **multiplyByRatio**<`TN`, `TD`\>(`other`): [`UnitedScalar`](UnitedScalar.md)<`TN`\>
 
-Return a new measurement that is the result of this scalar divided by the
+Return a new ratio that is the result of this scalar divided by the
 provided ratio's denominator multipled by the ratio's numerator. Essentially,
 apply the ratio.
 
 The unit of the ratio's denominator should match this scalar's unit, and the 
 resulting scalar's units will match the ratio's numerator.
 
-For example "seconds" multiplyByMeasurement  "meters" / "seconds" => "meters"
+For example "seconds" multiplyByRatio  "meters" / "seconds" => "meters"
 
 #### Type parameters
 
@@ -280,7 +281,7 @@ For example "seconds" multiplyByMeasurement  "meters" / "seconds" => "meters"
 
 #### Defined in
 
-[types/UnitedScalar.ts:98](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitedScalar.ts#L98)
+[types/UnitedScalar.ts:99](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitedScalar.ts#L99)
 
 ___
 
@@ -309,4 +310,4 @@ subtracted from this.
 
 #### Defined in
 
-[types/UnitedScalar.ts:47](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitedScalar.ts#L47)
+[types/UnitedScalar.ts:48](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitedScalar.ts#L48)

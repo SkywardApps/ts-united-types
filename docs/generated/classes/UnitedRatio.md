@@ -2,6 +2,7 @@
 
 # Class: UnitedRatio<T, D\>
 
+NOT FOR GENERAL USE -- use the `ratio` factory method, typically.
 A `Unit`-ed ratio is a relationship between two differently-`unit`-ed scalar values.
 
 Examples: 10 meters per second or 4 width : 3 height
@@ -74,7 +75,7 @@ The default constructor takes the two unit-ed scalars and stores their relations
 
 #### Defined in
 
-[types/UnitedRatio.ts:35](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitedRatio.ts#L35)
+[types/UnitedRatio.ts:36](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitedRatio.ts#L36)
 
 ## Properties
 
@@ -88,7 +89,7 @@ The default constructor takes the two unit-ed scalars and stores their relations
 
 #### Defined in
 
-[types/UnitConversion.ts:23](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitConversion.ts#L23)
+[types/UnitConversion.ts:24](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitConversion.ts#L24)
 
 ___
 
@@ -102,7 +103,7 @@ ___
 
 #### Defined in
 
-[types/UnitConversion.ts:22](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitConversion.ts#L22)
+[types/UnitConversion.ts:23](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitConversion.ts#L23)
 
 ## Accessors
 
@@ -118,7 +119,7 @@ Get the ratio as a single number.
 
 #### Defined in
 
-[types/UnitedRatio.ts:27](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitedRatio.ts#L27)
+[types/UnitedRatio.ts:28](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitedRatio.ts#L28)
 
 ## Methods
 
@@ -147,7 +148,7 @@ Add two ratios of identical units.
 
 #### Defined in
 
-[types/UnitedRatio.ts:77](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitedRatio.ts#L77)
+[types/UnitedRatio.ts:78](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitedRatio.ts#L78)
 
 ___
 
@@ -176,7 +177,7 @@ Convert the units of the denominator.
 
 #### Defined in
 
-[types/UnitedRatio.ts:64](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitedRatio.ts#L64)
+[types/UnitedRatio.ts:65](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitedRatio.ts#L65)
 
 ___
 
@@ -205,7 +206,7 @@ Convert the units of the numerator.
 
 #### Defined in
 
-[types/UnitedRatio.ts:51](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitedRatio.ts#L51)
+[types/UnitedRatio.ts:52](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitedRatio.ts#L52)
 
 ___
 
@@ -225,7 +226,7 @@ Flip the numerator and denominator for the inverse relationship.
 
 #### Defined in
 
-[types/UnitedRatio.ts:43](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitedRatio.ts#L43)
+[types/UnitedRatio.ts:44](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitedRatio.ts#L44)
 
 ___
 
@@ -256,7 +257,7 @@ The resulting scalar's units will match the numerator of this ratio.
 
 #### Defined in
 
-[types/UnitedRatio.ts:96](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitedRatio.ts#L96)
+[types/UnitedRatio.ts:97](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitedRatio.ts#L97)
 
 ___
 
@@ -285,7 +286,7 @@ Subtract the parameter ratio from this, requiring identical units.
 
 #### Defined in
 
-[types/UnitedRatio.ts:85](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitedRatio.ts#L85)
+[types/UnitedRatio.ts:86](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitedRatio.ts#L86)
 
 ___
 
@@ -318,7 +319,7 @@ v is UnitConversion<T, D\>
 
 #### Defined in
 
-[types/UnitConversion.ts:17](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitConversion.ts#L17)
+[types/UnitConversion.ts:18](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitConversion.ts#L18)
 
 ___
 
@@ -347,4 +348,4 @@ v is UnitedRatio<T, D\>
 
 #### Defined in
 
-[types/UnitedRatio.ts:19](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitedRatio.ts#L19)
+[types/UnitedRatio.ts:20](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitedRatio.ts#L20)

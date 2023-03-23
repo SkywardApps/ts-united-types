@@ -1,6 +1,7 @@
 import { UnitedScalar } from './UnitedScalar';
 
 /**
+ * NOT FOR GENERAL USE -- use the `converter` factory method, typically.
  * This represents a conversion from one unit to another of the same category.
  * 
  * It has a source unit and a destination unit, along with a ratio.  For precision

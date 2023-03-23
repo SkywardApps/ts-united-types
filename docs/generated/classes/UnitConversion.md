@@ -2,6 +2,7 @@
 
 # Class: UnitConversion<T, D\>
 
+NOT FOR GENERAL USE -- use the `converter` factory method, typically.
 This represents a conversion from one unit to another of the same category.
 
 It has a source unit and a destination unit, along with a ratio.  For precision
@@ -63,7 +64,7 @@ Default constructor requires the source unit to convert _from_ and the source un
 
 #### Defined in
 
-[types/UnitConversion.ts:28](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitConversion.ts#L28)
+[types/UnitConversion.ts:29](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitConversion.ts#L29)
 
 ## Properties
 
@@ -73,7 +74,7 @@ Default constructor requires the source unit to convert _from_ and the source un
 
 #### Defined in
 
-[types/UnitConversion.ts:23](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitConversion.ts#L23)
+[types/UnitConversion.ts:24](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitConversion.ts#L24)
 
 ___
 
@@ -83,7 +84,7 @@ ___
 
 #### Defined in
 
-[types/UnitConversion.ts:22](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitConversion.ts#L22)
+[types/UnitConversion.ts:23](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitConversion.ts#L23)
 
 ## Methods
 
@@ -99,7 +100,7 @@ Invert the conversion from source -> destination to destination -> source.
 
 #### Defined in
 
-[types/UnitConversion.ts:37](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitConversion.ts#L37)
+[types/UnitConversion.ts:38](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitConversion.ts#L38)
 
 ___
 
@@ -128,4 +129,4 @@ v is UnitConversion<T, D\>
 
 #### Defined in
 
-[types/UnitConversion.ts:17](https://github.com/SkywardApps/ts-united-types/blob/293426c/src/types/UnitConversion.ts#L17)
+[types/UnitConversion.ts:18](https://github.com/SkywardApps/ts-united-types/blob/c4003f7/src/types/UnitConversion.ts#L18)
