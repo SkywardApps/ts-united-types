@@ -2,6 +2,8 @@
 
 A library for creating, using, and tracking  `unit`-ed numbers -- that is, 'meters', 'seconds', 'volts', etc.
 
+Created by [Nicholas Elliott](https://nicholasmtelliott.com) at Skyward App Company. Maintained by [@NicholasMTElliott](https://github.com/NicholasMTElliott).
+
 # Overview
 
 ![Animated code example](docs/UnitTypes.gif)
