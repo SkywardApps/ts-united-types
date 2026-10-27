@@ -1,12 +1,14 @@
 # ts-united-types
 
+[![CI](https://github.com/SkywardApps/ts-united-types/actions/workflows/ci.yml/badge.svg?branch=mainline)](https://github.com/SkywardApps/ts-united-types/actions/workflows/ci.yml)
+
 A library for creating, using, and tracking  `unit`-ed numbers -- that is, 'meters', 'seconds', 'volts', etc.
 
 Created by [Nicholas Elliott](https://nicholasmtelliott.com) at Skyward App Company. Maintained by [@NicholasMTElliott](https://github.com/NicholasMTElliott).
 
 # Overview
 
-![Animated code example](docs/UnitTypes.gif)
+![Animated code example](https://raw.githubusercontent.com/SkywardApps/ts-united-types/mainline/docs/UnitTypes.gif)
 
 There is a _type_ level to this units, ensuring that you only assign like-units to like-units.  It also supports tracking
 ratio units -- that is meters per second or pounds per square inch.  It then enables switching between units either via
@@ -57,4 +59,4 @@ function ConvertAcresToAnotherAreaUnit(inputValue: UnitedScalar<'ac'>, outputUni
 }
 ```
 
-View the API documentation in the [docs folder.](docs/generated/modules.md)
+View the API documentation in the [docs folder.](https://github.com/SkywardApps/ts-united-types/blob/mainline/docs/generated/modules.md)
