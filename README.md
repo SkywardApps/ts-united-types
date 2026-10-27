@@ -8,7 +8,7 @@ Created by [Nicholas Elliott](https://nicholasmtelliott.com) at Skyward App Comp
 
 # Overview
 
-![Animated code example](docs/UnitTypes.gif)
+![Animated code example](https://raw.githubusercontent.com/SkywardApps/ts-united-types/mainline/docs/UnitTypes.gif)
 
 There is a _type_ level to this units, ensuring that you only assign like-units to like-units.  It also supports tracking
 ratio units -- that is meters per second or pounds per square inch.  It then enables switching between units either via
@@ -59,4 +59,4 @@ function ConvertAcresToAnotherAreaUnit(inputValue: UnitedScalar<'ac'>, outputUni
 }
 ```
 
-View the API documentation in the [docs folder.](docs/generated/modules.md)
+View the API documentation in the [docs folder.](https://github.com/SkywardApps/ts-united-types/blob/mainline/docs/generated/modules.md)
