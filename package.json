@@ -8,9 +8,6 @@
     "dist"
   ],
   "sideEffects": false,
-  "engines": {
-    "node": ">=22"
-  },
   "homepage": "https://github.com/SkywardApps/ts-united-types#readme",
   "repository": {
     "type": "git",
@@ -35,7 +32,7 @@
     "test:types": "tsc --noEmit -p test-types",
     "lint": "eslint \"{src,test-types}/**/*.ts\"",
     "clean": "node -e \"require('fs').rmSync('dist', { recursive: true, force: true })\"",
-    "build": "tsc --declaration --declarationMap --sourceMap --inlineSources",
+    "build": "tsc --declaration --sourceMap --inlineSources",
     "docs": "typedoc --plugin typedoc-plugin-markdown --out docs/generated src/index.ts",
     "prepublishOnly": "npm run lint && npm run test:types && npm test",
     "prepack": "npm run clean && npm run build"
