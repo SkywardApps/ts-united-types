@@ -1,17 +1,41 @@
 {
   "name": "@skywardapps/ts-united-types",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "Types and classes for tracking simple units (meters, seconds, acres, etc)",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "homepage": "",
-  "keywords": [],
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22"
+  },
+  "homepage": "https://github.com/SkywardApps/ts-united-types#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SkywardApps/ts-united-types.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SkywardApps/ts-united-types/issues"
+  },
+  "keywords": [
+    "units",
+    "units-of-measure",
+    "unit-conversion",
+    "measurement",
+    "dimensional-analysis",
+    "type-safe",
+    "typescript"
+  ],
   "author": "Nicholas Elliott (https://nicholasmtelliott.com)",
   "license": "MIT",
   "scripts": {
     "test": "jest",
     "lint": "eslint src/**/*.{js,jsx,ts,tsx,json}",
-    "build": "eslint src/**/*.{js,jsx,ts,tsx,json} && tsc --declaration --declarationMap --sourceMap && typedoc --plugin typedoc-plugin-markdown --out docs/generated src/index.ts"
+    "clean": "node -e \"require('fs').rmSync('dist', { recursive: true, force: true })\"",
+    "build": "eslint src/**/*.{js,jsx,ts,tsx,json} && tsc --declaration --declarationMap --sourceMap --inlineSources && typedoc --plugin typedoc-plugin-markdown --out docs/generated src/index.ts",
+    "prepack": "npm run clean && npm run build"
   },
   "devDependencies": {
     "@types/convert-units": "^2.3.5",
