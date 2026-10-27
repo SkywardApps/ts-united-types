@@ -1,5 +1,7 @@
 # ts-united-types
 
+[![CI](https://github.com/SkywardApps/ts-united-types/actions/workflows/ci.yml/badge.svg?branch=mainline)](https://github.com/SkywardApps/ts-united-types/actions/workflows/ci.yml)
+
 A library for creating, using, and tracking  `unit`-ed numbers -- that is, 'meters', 'seconds', 'volts', etc.
 
 Created by [Nicholas Elliott](https://nicholasmtelliott.com) at Skyward App Company. Maintained by [@NicholasMTElliott](https://github.com/NicholasMTElliott).
